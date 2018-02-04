@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="Popular">Sort By Popular</string>
+    <string name="Top">Sort By Top</string>
+
+    <!-- API KEY GOES HERE -->
+    <string name="api_key">1d97e2927b0fd321d2ada56199da5409</string>
+    <!-- API KEY GOES HERE -->
+
+    <string name="Ratings">Ratings</string>
+    <string name="ReleaseDate">Release Date</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="content_description_movie_poster">Poster of the Movie</string>
+    <string name="hyphen10">/10</string>
+
+</resources>

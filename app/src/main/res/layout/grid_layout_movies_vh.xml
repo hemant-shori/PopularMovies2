@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_movie_poster"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTransparentGrey"
+        android:layout_gravity="center"
+        android:contentDescription="@string/content_description_movie_poster"
+        android:scaleType="fitCenter" />
+
+    <TextView
+            android:id="@+id/tv_movie_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorTransparentGrey"
+            android:gravity="center"
+            android:minLines="2"
+            android:padding="@dimen/dp5"
+            android:textColor="@color/colorWhite" />
+
+
+        <TextView
+            android:id="@+id/tv_ratings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorTransparentGrey"
+            android:drawableLeft="@drawable/ic_star_rating"
+            android:drawableStart="@drawable/ic_star_rating"
+            android:gravity="center"
+            android:padding="@dimen/dp3"
+            android:textColor="@color/colorWhite" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorWhite" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="175dp"
+        android:layout_gravity="end"
+        android:background="@color/colorWhite" />
+
+
+</FrameLayout>
