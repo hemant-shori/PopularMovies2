@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="smallestWidth600">600</integer>
+    <integer name="smallestWidth700">700</integer>
+    <integer name="columnCount2">2</integer>
+    <integer name="columnCount3">3</integer>
+    <integer name="columnCount4">4</integer>
+</resources>

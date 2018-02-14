@@ -1,16 +1,31 @@
 <resources>
     <string name="app_name">Popular Movies</string>
-    <string name="Popular">Sort By Popular</string>
-    <string name="Top">Sort By Top</string>
+    <string name="Popular">Sort By Popular Movies</string>
+    <string name="Top">Sort By Top Movies</string>
+    <string name="Favorite">Show Favorite Movies</string>
 
     <!-- API KEY GOES HERE -->
     <string name="api_key">1d97e2927b0fd321d2ada56199da5409</string>
     <!-- API KEY GOES HERE -->
 
+    <string name="Reviews">Reviews</string>
+    <string name="Trailers">Trailers</string>
     <string name="Ratings">Ratings</string>
     <string name="ReleaseDate">Release Date</string>
     <string name="synopsis">Synopsis</string>
+    <string name="OriginalTitle">Original Title</string>
     <string name="content_description_movie_poster">Poster of the Movie</string>
     <string name="hyphen10">/10</string>
-
+    <string name="UnableToGetTheMovieData">Unable to Get the Movie Data</string>
+    <string name="UnableToConnectToInternet">Unable to Connect to Internet</string>
+    <string name="NoMovieReviewsFound">No Movie Reviews Found</string>
+    <string name="NoYouTubeTrailersFound">No YouTube Trailers Found</string>
+    <string name="TryAgain">Try Again</string>
+    <string name="YoutubeTrailerA11y">Youtube Trailer</string>
+    <string name="YouTubeURL">"http://www.youtube.com/watch?v="</string>
+    <string name="PopularMovieTitle">Popular Movies</string>
+    <string name="TopMovieTitle">Top Movies</string>
+    <string name="FavoriteMovieTitle">Favorite Movies</string>
+    <string name="NoMovieFound">No Movie Found</string>
+    <string name="NoFavoriteMovieFound">No Favorite Movie Found</string>
 </resources>

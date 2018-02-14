@@ -1,4 +1,4 @@
-package com.hemant.popularmovies.Models;
+package com.hemant.popularmovies.models;
 
 
 import android.os.Parcel;
@@ -11,6 +11,8 @@ public class MovieDetails implements Parcelable {
     private String Synopsis;
     private String Ratings;
     private String ReleaseDate;
+    private int MovieId;
+    private byte[] MoviePoster;
 
     public String getImagePath() {
         return ImagePath;
@@ -30,6 +32,14 @@ public class MovieDetails implements Parcelable {
 
     public String getTitle() {
         return Title;
+    }
+
+    public int getMovieId() {
+        return MovieId;
+    }
+
+    public byte[] getMoviePoster() {
+        return MoviePoster;
     }
 
     public void setImagePath(String imagePath) {
@@ -52,6 +62,14 @@ public class MovieDetails implements Parcelable {
         Title = title;
     }
 
+    public void setMovieId(int movieId) {
+        MovieId = movieId;
+    }
+
+    public void setMoviePoster(byte[] moviePoster) {
+        MoviePoster = moviePoster;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -64,6 +82,15 @@ public class MovieDetails implements Parcelable {
         parcel.writeString(getSynopsis());
         parcel.writeString(getRatings());
         parcel.writeString(getReleaseDate());
+        parcel.writeInt(getMovieId());
+//        Alternative solution to read a byte[]
+        if (getMoviePoster() == null) {
+            parcel.writeInt(0);
+            parcel.writeByteArray(new byte[]{});
+        } else {
+            parcel.writeInt(getMoviePoster().length);
+            parcel.writeByteArray(getMoviePoster());
+        }
     }
 
     @Override
@@ -74,6 +101,7 @@ public class MovieDetails implements Parcelable {
                 ", ratings='" + getRatings() + "'" +
                 ", synopsis='" + getSynopsis() + "'" +
                 ",imagePath='" + getImagePath() + "'" +
+
                 "}";
 
     }
@@ -87,9 +115,15 @@ public class MovieDetails implements Parcelable {
         setSynopsis(in.readString());
         setRatings(in.readString());
         setReleaseDate(in.readString());
+        setMovieId(in.readInt());
+//        Alternative solution to read a byte[]
+        byte[] _byte = new byte[in.readInt()];
+        in.readByteArray(_byte);
+        setMoviePoster(_byte);
+//        setMoviePoster(in.createByteArray());
     }
 
-    public static Parcelable.Creator CREATOR = new Parcelable.Creator() {
+    public static Creator CREATOR = new Creator() {
         @Override
         public Object createFromParcel(Parcel parcel) {
             return new MovieDetails(parcel);
